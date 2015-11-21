@@ -1,0 +1,15 @@
+baseurl = "http://swproxy.alexanderbartels.com/"
+languageCode = "en-us"
+title = "swproxy | the library to write service worker"
+theme = "mdl"
+MetaDataFormat = "yaml"
+[permalinks]
+	home = "/:home/"
+	mods = "/:mods/"
+[params]
+    name = "Alexander Bartels"
+    description = "swproxy is a library to write service workers with ease."
+    website = "http://swproxy.alexanderbartels.com"
+    twitter = "https://twitter.com/bartelsxander"
+    github = "https://github.com/alexanderbartels/"
+    copyrightyear = "2015"
