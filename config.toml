@@ -1,4 +1,4 @@
-baseurl = "http://swproxy.alexanderbartels.com/"
+baseurl = "http://www.alexanderbartels.com/swproxy-www/"
 languageCode = "en-us"
 title = "swproxy | the library to write service worker"
 theme = "mdl"
