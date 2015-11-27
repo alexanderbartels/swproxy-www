@@ -10,8 +10,9 @@
         </main>
         <div class="mdl-layout__obfuscator"></div>
     </div>
+    <script src="./js/es6-promise.min.js"></script>
     <script src="./js/material.min.js"></script>
-    {{ if .IsPage }} {{ if ( eq .Type "post" ) }}<script src="/js/prism.js"></script>{{ end }}{{ end }}
-    {{ if .IsNode }} {{ partial "JS-cardmedia.html" . }} {{ partial "JS-fabbutton.html" . }}{{end}}
+    <script src="./js/mustache.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

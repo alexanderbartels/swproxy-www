@@ -28,6 +28,8 @@
         <link rel="stylesheet" href="./css/material.grey-orange.min.css"/>
         <link rel="stylesheet" href="./css/styles.css"/>
         {{ if .IsPage }} {{ if ( eq .Type "post" ) }} <link rel="stylesheet" href="./css/prism.css" /> {{end}} {{end}}
+
+        {{ partial "clientTemplates.html" . }}
 </head>
 
 <body>

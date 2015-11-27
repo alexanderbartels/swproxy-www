@@ -1,0 +1,25 @@
+{
+  "name": "swproxy-www",
+  "version": "1.0.0",
+  "description": "website for the swproxy library ",
+  "main": "index.js",
+  "scripts": {
+    "test": "cp node_modules/*/dist/*.js themes/mdl/static/js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexanderbartels/swproxy-www.git"
+  },
+  "author": "Alexander Bartels <bartels.xander@gmail.com> (http://www.alexanderbartels.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderbartels/swproxy-www/issues"
+  },
+  "homepage": "https://github.com/alexanderbartels/swproxy-www",
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "mustache": "^2.2.0",
+    "swproxy": "0.0.8",
+    "swproxy-mod-rewrite": "0.0.1"
+  }
+}
