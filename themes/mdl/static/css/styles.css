@@ -12,7 +12,7 @@ body {
 }
 
 .mdl-mini-footer {
-  margin-top: 80px;
+  margin-top: 2rem;
   min-height: 80px;
   padding: 20px;
   align-items: center;
@@ -20,7 +20,22 @@ body {
   box-sizing: border-box;
 }
 
+.mdl-mini-footer > .mdl-card__supporting-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .mdl-layout__content {
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -75,4 +90,8 @@ h3 {
 
 .mdl-cell--loading {
   margin: 3rem auto;
+}
+
+.mdl-card__actions {
+  text-align: right;
 }

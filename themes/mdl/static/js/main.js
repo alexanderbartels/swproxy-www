@@ -59,7 +59,7 @@ var loadModsViaProxy = function() {
     console.log("Mods not loaded from ServiceWorker!");
     return new Promise(function(resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://cors.maxogden.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy%22]&endkey=[%22swproxy%22,%7B%7D]&group_level=3', true);
+        xhr.open('GET', 'http://cors.maxogden.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy-mod%22]&endkey=[%22swproxy-mod%22,%7B%7D]&group_level=3', true);
         xhr.onload = function(e) {
             console.log('Server response status (via proxy): ', this.status);
             if (this.status == 200) {
@@ -76,7 +76,17 @@ var loadModsViaProxy = function() {
  * @param mods
  */
 var showMods = function (mods) {
-    var rendered = Mustache.render(templateCache['tplModList'], mods);
+
+    var rows = [];
+    for (var i = 0; i < mods.rows.length; i++) {
+        rows.push({
+            name: mods.rows[i].key[1], // package name
+            description: mods.rows[i].key[2], // package description
+            href: 'https://www.npmjs.com/package/' + mods.rows[i].key[1] // link to view package on npm
+        });
+    }
+
+    var rendered = Mustache.render(templateCache['tplModList'], {rows: rows});
     var container = document.querySelector('#resultContainer');
     container.innerHTML = rendered;
 };

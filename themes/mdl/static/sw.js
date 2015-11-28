@@ -35,4 +35,4 @@ proxy.registerMod({
 */
 
 // proxy.rewriteRule("asd", "Regex should match", "Modifiers");
-proxy.rewriteRule(new RegExp('.*/swproxy/mods$', ''), 'http://cors.maxogden.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy%22]&endkey=[%22swproxy%22,%7B%7D]&group_level=3', {});
+proxy.rewriteRule(new RegExp('.*/swproxy/mods$', ''), 'http://cors.maxogden.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy-mod%22]&endkey=[%22swproxy-mod%22,%7B%7D]&group_level=3', {});

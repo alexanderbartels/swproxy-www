@@ -1,9 +1,11 @@
                 <footer class="mdl-cell mdl-cell--bottom mdl-cell--12-col mdl-mini-footer">
-                    <div class="mdl-mini-footer--left-section">
-                        {{ partial "socialbtns.html" . }}
-                    </div>
-                    <div class="mdl-mini-footer--right-section">
-                        <span>© {{ .Site.Params.copyrightyear }} {{ .Site.Params.name }}</span>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-mini-footer--left-section">
+                            {{ partial "socialbtns.html" . }}
+                        </div>
+                        <div class="mdl-mini-footer--right-section">
+                            <span>© {{ .Site.Params.copyrightyear }} {{ .Site.Params.name }}</span>
+                        </div>
                     </div>
                 </footer>
             </div>

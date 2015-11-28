@@ -1,11 +1,19 @@
 <script id="tplModList" type="x-tmpl-mustache">
+<div class="mdl grid">
 [[#rows]]
-
-    [[#key]]
-        [[ . ]]
-        <br />
-    [[/key]]
-
-    <hr />
+    <div class="npm-package-card mdl-card mdl-cell mdl-cell--12-col">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">[[ name ]]</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        [[ description ]]
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a target="_blank" href="[[ href ]]" class="mdl-button mdl-js-button mdl-button--accent">
+          view on npm.org
+        </a>
+      </div>
+    </div>
 [[/rows]]
+</div>
 </script>
