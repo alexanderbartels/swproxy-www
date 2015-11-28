@@ -34,6 +34,21 @@ body {
   justify-content: space-between;
 }
 
+.mdl-mini-footer--right-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mdl-layout__content {
   width: 100%;
   display: -webkit-flex;
@@ -98,4 +113,10 @@ h3 {
 
 .npm-package-card .mdl-card__title {
   padding: 16px 16px 0 16px;
+}
+
+@media (max-width: 479px) {
+  .mdl-mini-footer .social-btn {
+    margin: 0;
+  }
 }
