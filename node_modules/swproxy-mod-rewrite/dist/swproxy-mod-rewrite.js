@@ -1,5 +1,4 @@
 
-
 /*eslint-disable no-alert, no-console */
 'use strict';
 
@@ -45,8 +44,21 @@ var ModRewriteRule = (function () {
         });
 
         event.request.url = calculatedUrl;
-        resolve(event);
+        resolve(_this.mergeModifier(event, _this.modifier));
       });
+    }
+
+    /**
+     * merges the current available modifiers into the event object
+     * @param event
+     * @param modifier
+     * @returns {*}
+       */
+  }, {
+    key: 'mergeModifier',
+    value: function mergeModifier(event, modifier) {
+      event.stopPropagation = modifier.stopPropagation;
+      return event;
     }
   }]);
 

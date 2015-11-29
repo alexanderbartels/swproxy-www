@@ -164,8 +164,14 @@ var SwProxy = (function () {
 
       var modifiableEvent = this.copyEvent(event);
       // execute all rules in sync, like here => https://github.com/DukeyToo/es6-promise-patterns
-      return rules.reduceRight(function (prev, curr) {
+      return rules.reduce(function (prev, curr) {
         return prev.then(function (result) {
+          if (result.stopPropagation) {
+            // if stopPropagation was set to true, don't call the next user defined rules
+            return new Promise(function (resolve) {
+              return resolve(result);
+            });
+          }
           return curr.execute(event, result);
         });
       }, new Promise(function (resolve) {

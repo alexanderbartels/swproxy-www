@@ -32,6 +32,9 @@ var initTemplate = function(id) {
 
 initTemplate('tplModList');
 
+
+var loadedViaServiceWorker = false;
+
 /**
  * load the swproxy-mods from own Server (/swproxy/mods)
  * @returns {Promise}
@@ -43,6 +46,7 @@ var loadMods = function() {
         xhr.onload = function(e) {
             console.log('Server response status: ', this.status);
             if (this.status == 200) {
+                loadedViaServiceWorker = true;
                 resolve(JSON.parse(this.response));
             }
             reject();
@@ -76,7 +80,6 @@ var loadModsViaProxy = function() {
  * @param mods
  */
 var showMods = function (mods) {
-
     var rows = [];
     for (var i = 0; i < mods.rows.length; i++) {
         rows.push({
@@ -89,6 +92,8 @@ var showMods = function (mods) {
     var rendered = Mustache.render(templateCache['tplModList'], {rows: rows});
     var container = document.querySelector('#resultContainer');
     container.innerHTML = rendered;
+
+    document.querySelector(loadedViaServiceWorker ? '.badge-sw' : '.badge-no-sw').setAttribute('style', 'display: block');
 };
 
 /**
