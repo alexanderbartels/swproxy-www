@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="generator" content="Hugo 0.14" />
+        
+        <link rel="icon" type="image/png" href="/images/favicon.ico">
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="My thoughts and rambles">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>swproxy | the library to write service worker</title>
+        
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="swproxy">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+        
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"/>
+        <link rel="stylesheet" href="./css/ionicons.min.css"/>
+        <link rel="stylesheet" href="./css/material.grey-orange.min.css"/>
+        <link rel="stylesheet" href="./css/styles.css"/>
+        
+
+        <script id="tplModList" type="x-tmpl-mustache">
+<div class="mdl grid">
+[[#rows]]
+    <div class="npm-package-card mdl-card mdl-cell mdl-cell--12-col">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">[[ name ]]</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        [[ description ]]
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a target="_blank" href="[[ href ]]" class="mdl-button mdl-js-button mdl-button--accent">
+          view on npm.org
+        </a>
+      </div>
+    </div>
+[[/rows]]
+</div>
+</script>
+
+</head>
+
+<body>
+    <div class="hugo-blog mdl-layout mdl-js-layout is-upgraded">
+        
+    
+    
+    <main class="mdl-layout__content">
+        <div class="mdl-grid">
+
+
+<div class="badges">
+    <div id="swBadge" class="badge-sw">ServiceWroker <strong>&#10004;</strong></div>
+    <div id="noSwBadge" class="badge-no-sw">ServiceWroker <strong>x</strong></div>
+</div>
+
+<div class="badge-tooltip mdl-tooltip" for="swBadge">
+    The list with available mods are loaded via Service Worker!
+</div>
+
+<div class="badge-tooltip mdl-tooltip" for="noSwBadge">
+    The list with available mods aren't loaded via Service Worker :-(
+    <br />
+    Try to reload the page, if your Browser supports Service Worker.
+</div>
+
+<div class="hugo-blog__search mdl-cell mdl-cell--12-col">
+    <div class="mdl-color-text--grey-800 mdl-card__supporting-text about-text">
+        <h1>swproxy</h1>
+        <h3>the library to write service worker</h3>
+
+        <div class="mdl-grid mdl-color-text--grey-700 ">
+            <input class="mod-search" type="text" placeholder="Search for keywords, Mod names, etc." />
+        </div>
+
+        <div id="resultContainer">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--middle mdl-cell--1-col mdl-cell--loading">
+                    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <footer class="mdl-cell mdl-cell--bottom mdl-cell--12-col mdl-mini-footer">
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-mini-footer--left-section">
+                            <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-mini-footer--social-btn social-btn" href="https://github.com/alexanderbartels/swproxy">
+    <i class="material-icons_lg icon ion-social-github"></i>
+    <span class="visuallyhidden">Github</span>
+</a>
+<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-mini-footer--social-btn social-btn" href="https://twitter.com/bartelsxander">
+    <i class="material-icons_lg icon ion-social-twitter "></i>                        
+    <span class="visuallyhidden">Twitter</span>
+</a>
+                        </div>
+                        <div class="mdl-mini-footer--right-section">
+                            <a href="http://www.alexanderbartels.com" class="authorLink">© 2015 Alexander Bartels</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <div class="mdl-layout__obfuscator"></div>
+    </div>
+    <script src="./js/es6-promise.min.js"></script>
+    <script src="./js/material.min.js"></script>
+    <script src="./js/mustache.min.js"></script>
+    <script src="./js/main.js"></script>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-54367902-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>
