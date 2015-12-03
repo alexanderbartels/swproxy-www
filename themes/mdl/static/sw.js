@@ -37,6 +37,7 @@ proxy.registerMod({
 // proxy.rewriteRule("asd", "Regex should match", "Modifiers");
 proxy.rewriteRule(new RegExp('.*/swproxy/mods$', ''), 'https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy-mod%22]&endkey=[%22swproxy-mod%22,%7B%7D]&group_level=3', {});
 
-proxy.mockRule(new RegExp('.*/rest/foo'), {
-    foo: 'bar'
-}, {});
+
+// proxy.mockRule(new RegExp('.*/rest/foo'), {
+//    foo: 'bar'
+// }, {});
