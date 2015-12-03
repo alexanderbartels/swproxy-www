@@ -63,7 +63,7 @@ var loadModsViaProxy = function() {
     console.log("Mods not loaded from ServiceWorker!");
     return new Promise(function(resolve, reject) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://cors.maxogden.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy-mod%22]&endkey=[%22swproxy-mod%22,%7B%7D]&group_level=3', true);
+        xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/-/_view/byKeyword?startkey=[%22swproxy-mod%22]&endkey=[%22swproxy-mod%22,%7B%7D]&group_level=3', true);
         xhr.onload = function(e) {
             console.log('Server response status (via proxy): ', this.status);
             if (this.status == 200) {

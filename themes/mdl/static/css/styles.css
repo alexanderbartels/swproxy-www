@@ -126,8 +126,17 @@ h3 {
 }
 
 @media (max-width: 479px) {
+  .mdl-mini-footer {
+    padding: 20px 0;
+  }
+
   .mdl-mini-footer .social-btn {
     margin: 0;
+  }
+
+  .mdl-card__supporting-text {
+    padding: 0;
+    width: 100%;
   }
 }
 
